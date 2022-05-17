@@ -3,13 +3,13 @@ namespace BestUniversityManager.Model
 {
     public static class UniversityManager
     {
-        public static Student AssighnhTeacher(Student student, Teacher teacher)
+        public static Student AssignTeacher(Student student, Teacher teacher)
         {
             student._teacher = teacher;
 
             return student;
         }
-        public static Student[] AssighnhTeachers(Student[] students, Teacher[] teachers)
+        public static Student[] AssignTeachers(Student[] students, Teacher[] teachers)
         {
             for (int i = 0; i < students.Length; i++)
             {
@@ -19,7 +19,7 @@ namespace BestUniversityManager.Model
 
             return students;
         }
-        public static Teacher[] AssighnStudents(Teacher[] teachers, Student[] students)
+        public static Teacher[] AssignStudents(Teacher[] teachers, Student[] students)
         {
             int minStCount = students.Length / teachers.Length;
             for (int i = 0; i < teachers.Length - 1; i++)
@@ -40,22 +40,22 @@ namespace BestUniversityManager.Model
             }
             return teachers;
         }
-        public static Teacher AssighnStudents(Teacher teacher, Student[] students)
+        public static Teacher AssignStudents(Teacher teacher, Student[] students)
         {
             teacher._students = students;
             return teacher;
         }
-        public static Group AssighnStudents(Group group, Student[] students)
+        public static Group AssignStudents(Group group, Student[] students)
         {
             group._students = students;
             return group;
         }
-        public static Group AssighnTeachers(Group group, Teacher[] teachers)
+        public static Group AssignTeachers(Group group, Teacher[] teachers)
         {
             group._teachers = teachers;
             return group;
         }
-        public static Student[] AssighnGroup(Student[] students, Group group)
+        public static Student[] AssignGroup(Student[] students, Group group)
         {
             for (int i = 0; i < students.Length; i++)
             {
@@ -63,7 +63,7 @@ namespace BestUniversityManager.Model
             }
             return students;
         }
-        public static Group[] AssighnTeachers(Group[] groups, Teacher[] teachers)
+        public static Group[] AssignTeachers(Group[] groups, Teacher[] teachers)
         {
             int mincount = teachers.Length / groups.Length;
             for (int i = 0; i < groups.Length - 1; i++)
@@ -83,7 +83,7 @@ namespace BestUniversityManager.Model
             }
             return groups;
         }
-        public static Teacher[] AssighnGroups(Teacher[] teachers, Group[] groups)
+        public static Teacher[] AssignGroups(Teacher[] teachers, Group[] groups)
         {
             for (int i = 0; i < teachers.Length; i++)
             {
